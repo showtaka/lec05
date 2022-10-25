@@ -48,8 +48,10 @@ public class Sample3AuthConfiguration {
         .mvcMatchers("/sample5/**").authenticated()
         .mvcMatchers("/sample58*").authenticated();
     http.logout().logoutSuccessUrl("/");
+
     http.csrf().disable();
     http.headers().frameOptions().disable();
+
     return http.build();
   }
 
